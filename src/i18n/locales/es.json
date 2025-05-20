@@ -1,0 +1,93 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Nosotros",
+    "services": "Servicios",
+    "works": "Nuestros Trabajos",
+    "tuning": "Tuning",
+    "maintenance": "Mantenimiento",
+    "store": "Tienda",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "title": "TALLER DE TUNING BMW",
+    "subtitle": "Especialista Profesional en BMW M Performance",
+    "services": {
+      "retrofits": "Retrofits",
+      "tuning": "Tuning DME Etapa 1-3",
+      "coding": "Programación y Codificación",
+      "mechanical": "Especialista Mecánico y Eléctrico"
+    },
+    "buttons": {
+      "services": "Hacer Cita",
+      "shop": "Tienda"
+    }
+  },
+  "services": {
+    "title": "Nuestros Servicios",
+    "dme": {
+      "title": "Tuning DME",
+      "items": [
+        "Tuning Etapa 1-3",
+        "Reprogramación ECU",
+        "Limitador de Velocidad",
+        "Mapas Personalizados"
+      ]
+    },
+    "performance": {
+      "title": "Rendimiento",
+      "items": [
+        "Sistemas de Escape",
+        "Kits de Suspensión",
+        "Sistemas de Admisión",
+        "Mejoras de Frenos"
+      ]
+    },
+    "retrofit": {
+      "title": "Retrofit",
+      "items": [
+        "Activación de Características",
+        "Programación de Módulos",
+        "Instalación OEM",
+        "Actualizaciones del Sistema"
+      ]
+    },
+    "mechanical": {
+      "title": "Mecánico",
+      "items": [
+        "Diagnóstico de Motor",
+        "Transmisión",
+        "Suspensión",
+        "Servicio de Frenos"
+      ]
+    },
+    "electrical": {
+      "title": "Eléctrico",
+      "items": [
+        "Diagnóstico de Sistemas",
+        "Reparación de Cableado",
+        "Servicio de Sensores",
+        "Instalación de Equipos"
+      ]
+    }
+  },
+  "products": {
+    "title": "Productos Destacados",
+    "learnMore": "Más Información"
+  },
+  "location": {
+    "title": "Nuestra Ubicación",
+    "address": "2023 Grant St",
+    "city": "Hollywood, FL 33020",
+    "email": "bimmermotorsportperformance@gmail.com",
+    "phone": "(754) 925-9881"
+  },
+  "instagram": {
+    "title": "Nuestros Trabajos"
+  },
+  "chat": {
+    "title": "Asistente de Chat",
+    "placeholder": "Escribe tu mensaje...",
+    "send": "Enviar"
+  }
+} 
