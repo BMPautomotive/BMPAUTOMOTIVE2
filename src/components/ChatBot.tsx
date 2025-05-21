@@ -169,7 +169,7 @@ export default function ChatBot() {
                 value={inputText}
                 onChange={(e) => setInputText(e.target.value)}
                 onKeyPress={(e) => e.key === 'Enter' && handleSend()}
-                placeholder={t('chat.placeholder')}
+                placeholder={String(t('chat.placeholder'))}
                 className="flex-1 bg-m-gray text-white rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-m-red"
               />
               <button
