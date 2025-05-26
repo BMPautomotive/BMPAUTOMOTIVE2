@@ -154,27 +154,27 @@ export default function Home() {
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
           <div className="max-w-3xl transform group-hover:translate-x-4 transition-transform duration-700">
-            <h1 className="text-6xl md:text-7xl font-extrabold text-white tracking-wider mb-6 group-hover:text-m-light-blue transition-colors duration-700">
+            <h1 className="text-4xl md:text-5xl font-extrabold text-white tracking-wider mb-6 group-hover:text-m-light-blue transition-colors duration-700">
               {t('hero.title')}
             </h1>
             <div className="h-2 w-40 bg-gradient-m mb-8 group-hover:w-48 transition-all duration-700"></div>
-            <div className="text-xl md:text-2xl text-gray-200 mb-12 space-y-4">
+            <div className="text-lg md:text-xl text-gray-200 mb-12 space-y-4">
               <p className="font-bold text-m-light-blue transform group-hover:translate-x-2 transition-transform duration-700">{t('hero.subtitle')}</p>
               <ul className="space-y-3">
                 <li className="flex items-center transform group-hover:translate-x-2 transition-transform duration-700">
-                  <span className="text-m-red mr-3 text-xl">•</span>
+                  <span className="text-m-red mr-3 text-lg">•</span>
                   {t('hero.services.retrofits')}
                 </li>
                 <li className="flex items-center transform group-hover:translate-x-2 transition-transform duration-700">
-                  <span className="text-m-red mr-3 text-xl">•</span>
+                  <span className="text-m-red mr-3 text-lg">•</span>
                   {t('hero.services.tuning')}
                 </li>
                 <li className="flex items-center transform group-hover:translate-x-2 transition-transform duration-700">
-                  <span className="text-m-red mr-3 text-xl">•</span>
+                  <span className="text-m-red mr-3 text-lg">•</span>
                   {t('hero.services.coding')}
                 </li>
                 <li className="flex items-center transform group-hover:translate-x-2 transition-transform duration-700">
-                  <span className="text-m-red mr-3 text-xl">•</span>
+                  <span className="text-m-red mr-3 text-lg">•</span>
                   {t('hero.services.mechanical')}
                 </li>
               </ul>
@@ -353,23 +353,22 @@ export default function Home() {
 
       {/* Instagram Feed */}
       <div className="py-24 bg-gradient-to-b from-m-dark to-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">{t('instagram.title')}</h2>
             <div className="h-1 w-24 bg-gradient-m mx-auto mb-6"></div>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">{t('instagram.subtitle')}</p>
           </div>
           <div className="flex justify-center transform hover:scale-105 transition-transform duration-500">
-            <div className="bg-m-gray rounded-lg overflow-hidden shadow-xl hover:shadow-2xl hover:shadow-m-red/20 transition-all duration-500">
+            <div className="bg-m-gray rounded-lg overflow-hidden shadow-xl hover:shadow-2xl hover:shadow-m-red/20 transition-all duration-500 w-full">
               {/* @ts-ignore */}
               <iframe
-                src="https://lightwidget.com/widgets/197abdabbdaf5949b303759ab64d7a7a.html"
+                src="https://lightwidget.com/widgets/197abdabbdaf5949b303759ab64d7a7a.html?width=100%&height=600&rows=2&cols=4&imageSize=300&imagePadding=10&background=transparent"
                 scrolling="no"
                 allowTransparency={true}
-                className="lightwidget-widget border-none overflow-hidden rounded-lg w-full max-w-2xl"
-                style={{ width: '100%', border: 0, overflow: 'hidden' }}
+                className="lightwidget-widget border-none overflow-hidden rounded-lg w-full"
+                style={{ width: '100%', border: 0, overflow: 'hidden', height: '600px' }}
                 title="Instagram Feed BMP Automotive"
-                height={400}
               ></iframe>
             </div>
           </div>
@@ -390,12 +389,12 @@ export default function Home() {
       </div>
 
       {/* Partners Section */}
-      <div className="bg-m-dark py-24">
+      <section className="bg-m-dark py-24" aria-labelledby="partners-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">{t('partners.title')}</h2>
+            <h2 id="partners-heading" className="text-4xl md:text-5xl font-bold text-white mb-4">Partners</h2>
             <div className="h-1 w-24 bg-gradient-m mx-auto mb-6"></div>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">{t('partners.subtitle')}</p>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">We collaborate with leading manufacturers of tuning and spare parts</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {partners.map((partner) => (
@@ -404,34 +403,25 @@ export default function Home() {
                 href={partner.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group"
+                className="group bg-m-gray rounded-lg p-8 transform hover:scale-105 transition-all duration-500 hover:shadow-xl hover:shadow-m-red/20"
+                aria-label={`Visit ${partner.name} website`}
               >
-                <div className="bg-m-gray rounded-lg overflow-hidden transform hover:scale-105 transition-all duration-500 hover:shadow-xl hover:shadow-m-red/20">
-                  <div className="relative h-48">
-                    <Image
-                      src={partner.image}
-                      alt={partner.name}
-                      fill
-                      className="object-contain p-6 group-hover:scale-110 transition-transform duration-700"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-m-dark/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-m-light-blue transition-colors duration-300">{partner.name}</h3>
-                    <p className="text-gray-300 mb-4">{partner.description}</p>
-                    <div className="inline-flex items-center text-m-light-blue font-semibold group-hover:text-white transition-colors duration-300">
-                      {t('partners.visitWebsite')}
-                      <svg className="w-5 h-5 ml-2 transform group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                      </svg>
-                    </div>
-                  </div>
+                <div className="space-y-4">
+                  <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-m-light-blue transition-colors duration-300">
+                    {partner.name}
+                  </h3>
+                  <p className="text-gray-300 mb-4">{partner.description}</p>
                 </div>
               </a>
             ))}
           </div>
+          <div className="mt-12 text-center">
+            <p className="text-gray-300 text-sm">
+              {t('partners.seoText')}
+            </p>
+          </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 }

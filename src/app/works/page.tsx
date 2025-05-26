@@ -1,8 +1,14 @@
+'use client';
+
+import { useLanguage } from '@/i18n/LanguageContext';
+
 export default function WorksPage() {
+  const { t } = useLanguage();
+  
   return (
     <div className="bg-gray-900 min-h-screen py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="text-4xl font-bold text-white mb-8 text-center">Наши работы</h1>
+        <h1 className="text-4xl font-bold text-white mb-8 text-center">{t('instagram.title')}</h1>
         <div className="flex justify-center">
           <iframe
             src="https://lightwidget.com/widgets/197abdabbdaf5949b303759ab64d7a7a.html"
