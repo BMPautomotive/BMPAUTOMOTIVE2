@@ -3,81 +3,62 @@
 import { useLanguage } from '@/i18n/LanguageContext';
 import Image from 'next/image';
 
-const retrofitExamples = [
+const retrofitServices = [
   {
     id: 1,
     title: {
-      en: "Adaptive Cruise Control",
-      es: "Control de Crucero Adaptativo",
-      ru: "Адаптивный круиз-контроль"
+      en: "Multimedia Systems",
+      es: "Sistemas Multimedia",
+      ru: "Мультимедиа системы"
     },
     description: {
-      en: "Professional installation of adaptive cruise control system for BMW F-series models. Includes radar sensor installation, steering wheel button replacement, and system coding.",
-      es: "Instalación profesional del sistema de control de crucero adaptativo para modelos BMW de la serie F. Incluye instalación del sensor de radar, reemplazo de botones del volante y codificación del sistema.",
-      ru: "Профессиональная установка системы адаптивного круиз-контроля для моделей BMW F-серии. Включает установку радарного датчика, замену кнопок на руле и кодирование системы."
+      en: "Professional installation of advanced multimedia systems including Apple CarPlay, Android Auto, and BMW ConnectedDrive features",
+      es: "Instalación profesional de sistemas multimedia avanzados incluyendo Apple CarPlay, Android Auto y funciones BMW ConnectedDrive",
+      ru: "Профессиональная установка современных мультимедиа систем, включая Apple CarPlay, Android Auto и функции BMW ConnectedDrive"
     },
-    image: "/bmw-m-main.jpg",
-    models: ["F30", "F31", "F32", "F33", "F34", "F36"]
+    image: "/images/Retrofits.jpg"
   },
   {
     id: 2,
     title: {
-      en: "360° Camera System",
-      es: "Sistema de Cámara 360°",
-      ru: "Камера 360°"
+      en: "Driver Assistance Systems",
+      es: "Sistemas de Asistencia al Conductor",
+      ru: "Системы помощи водителю"
     },
     description: {
-      en: "Complete installation of surround view camera system. Includes front, rear, and side cameras with professional calibration and system integration.",
-      es: "Instalación completa del sistema de cámara de visión periférica. Incluye cámaras frontales, traseras y laterales con calibración profesional e integración del sistema.",
-      ru: "Полная установка системы кругового обзора. Включает переднюю, заднюю и боковые камеры с профессиональной калибровкой и интеграцией системы."
+      en: "Installation of advanced driver assistance systems including adaptive cruise control, lane departure warning, and 360° cameras",
+      es: "Instalación de sistemas avanzados de asistencia al conductor incluyendo control de crucero adaptativo, advertencia de cambio de carril y cámaras 360°",
+      ru: "Установка современных систем помощи водителю, включая адаптивный круиз-контроль, предупреждение о смене полосы и камеры 360°"
     },
-    image: "/bmw-m-main.jpg",
-    models: ["F30", "F31", "F32", "F33", "F34", "F36", "G20", "G21"]
+    image: "/images/Retrofits.jpg"
   },
   {
     id: 3,
     title: {
-      en: "Apple CarPlay & Android Auto",
-      es: "Apple CarPlay y Android Auto",
-      ru: "Apple CarPlay и Android Auto"
+      en: "Comfort Features",
+      es: "Características de Confort",
+      ru: "Комфорт"
     },
     description: {
-      en: "Wireless integration of Apple CarPlay and Android Auto. Compatible with all BMW models from 2016. Includes full system integration and wireless charging pad installation.",
-      es: "Integración inalámbrica de Apple CarPlay y Android Auto. Compatible con todos los modelos BMW desde 2016. Incluye integración completa del sistema e instalación de cargador inalámbrico.",
-      ru: "Беспроводная интеграция Apple CarPlay и Android Auto. Совместимо со всеми моделями BMW с 2016 года. Включает полную интеграцию системы и установку беспроводной зарядки."
+      en: "Enhance your BMW with comfort features like electric trunk, soft-close doors, ambient lighting, and heated steering wheel",
+      es: "Mejore su BMW con características de confort como maletero eléctrico, puertas de cierre suave, iluminación ambiental y volante calefactable",
+      ru: "Улучшите комфорт вашего BMW с помощью электрического багажника, дверей с плавным закрытием, подсветки салона и подогрева руля"
     },
-    image: "/bmw-m-main.jpg",
-    models: ["All models 2016+"]
+    image: "/images/Retrofits.jpg"
   },
   {
     id: 4,
     title: {
-      en: "Comfort Access",
-      es: "Comfort Access",
-      ru: "Comfort Access"
+      en: "M Performance Parts",
+      es: "Piezas M Performance",
+      ru: "Комплекты M Performance"
     },
     description: {
-      en: "Installation of keyless entry and start system. Includes door handle replacement, antenna installation, and system coding.",
-      es: "Instalación del sistema de entrada y arranque sin llave. Incluye reemplazo de manijas de puerta, instalación de antenas y codificación del sistema.",
-      ru: "Установка системы бесключевого доступа и запуска. Включает замену дверных ручек, установку антенн и кодирование системы."
+      en: "Installation of genuine M Performance parts including carbon fiber trims, sport exhaust systems, and suspension upgrades",
+      es: "Instalación de piezas genuinas M Performance incluyendo molduras de fibra de carbono, sistemas de escape deportivos y mejoras de suspensión",
+      ru: "Установка оригинальных комплектов M Performance, включая карбоновые детали, спортивные выхлопные системы и улучшенную подвеску"
     },
-    image: "/bmw-m-main.jpg",
-    models: ["F30", "F31", "F32", "F33", "F34", "F36"]
-  },
-  {
-    id: 5,
-    title: {
-      en: "LED Headlights Upgrade",
-      es: "Actualización a Faros LED",
-      ru: "Обновление до LED фар"
-    },
-    description: {
-      en: "Professional upgrade to LED headlights with adaptive functionality. Includes headlight replacement, system coding, and alignment.",
-      es: "Actualización profesional a faros LED con funcionalidad adaptativa. Incluye reemplazo de faros, codificación del sistema y alineación.",
-      ru: "Профессиональное обновление до LED фар с адаптивной функциональностью. Включает замену фар, кодирование системы и регулировку."
-    },
-    image: "/bmw-m-main.jpg",
-    models: ["F30", "F31", "F32", "F33", "F34", "F36"]
+    image: "/images/Retrofits.jpg"
   }
 ];
 
@@ -101,43 +82,25 @@ export default function RetrofitPage() {
           </p>
         </div>
 
-        {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-          {retrofitExamples.map((example) => (
-            <div key={example.id} className="bg-gray-800/50 backdrop-blur-sm rounded-xl overflow-hidden shadow-2xl transform transition-all duration-300 hover:scale-105 hover:shadow-red-500/20">
-              <div className="relative h-56">
+        {/* Services Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
+          {retrofitServices.map((service) => (
+            <div key={service.id} className="bg-white/5 rounded-lg p-8 transform hover:scale-105 transition-all duration-500">
+              <div className="relative h-48 mb-6">
                 <Image
-                  src={example.image}
-                  alt={example.title[language as keyof typeof example.title]}
+                  src={service.image}
+                  alt={service.title[language]}
                   fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="object-cover rounded-lg"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent" />
               </div>
-              <div className="p-8">
-                <h3 className="text-2xl font-semibold text-white mb-4">
-                  {example.title[language as keyof typeof example.title]}
-                </h3>
-                <p className="text-gray-300 mb-6 leading-relaxed">
-                  {example.description[language as keyof typeof example.description]}
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  {example.models.map((model) => (
-                    <span
-                      key={model}
-                      className="px-4 py-2 bg-m-red/20 text-m-red text-sm rounded-full border border-m-red/30"
-                    >
-                      {model}
-                    </span>
-                  ))}
-                </div>
-              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">{service.title[language]}</h3>
+              <p className="text-gray-300">{service.description[language]}</p>
             </div>
           ))}
         </div>
 
-        {/* Benefits Section */}
+        {/* Why Choose Us */}
         <div className="mt-24 text-center">
           <h2 className="text-3xl font-bold text-white mb-12">
             {language === 'en' ? 'Why Choose Our Retrofit Services?' :
@@ -162,6 +125,7 @@ export default function RetrofitPage() {
                  'Мы используем только оригинальные запчасти BMW и следуем заводским процедурам установки'}
               </p>
             </div>
+            
             <div className="bg-gray-800/50 backdrop-blur-sm p-8 rounded-xl transform transition-all duration-300 hover:scale-105">
               <div className="w-16 h-16 bg-m-red/20 rounded-full flex items-center justify-center mx-auto mb-6">
                 <svg className="w-8 h-8 text-m-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -179,6 +143,7 @@ export default function RetrofitPage() {
                  'Наши техники сертифицированы и имеют многолетний опыт работы с дооснащением BMW'}
               </p>
             </div>
+            
             <div className="bg-gray-800/50 backdrop-blur-sm p-8 rounded-xl transform transition-all duration-300 hover:scale-105">
               <div className="w-16 h-16 bg-m-red/20 rounded-full flex items-center justify-center mx-auto mb-6">
                 <svg className="w-8 h-8 text-m-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">

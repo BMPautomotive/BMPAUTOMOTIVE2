@@ -12,7 +12,7 @@ export default function AboutPage() {
       <div className="relative py-32 bg-gradient-to-b from-m-dark to-black">
         <div className="absolute inset-0">
           <Image
-            src="/about.png"
+            src="/images/shop photo.png"
             alt="About BMP Automotive"
             fill
             className="object-cover opacity-20"
@@ -54,12 +54,13 @@ export default function AboutPage() {
                 <li>Suspension and brake system tuning</li>
               </ul>
             </div>
-            <div className="relative h-64 md:h-auto">
+            <div className="relative h-[400px]">
               <Image
-                src="/shop.png"
+                src="/images/shop photo.png"
                 alt="Our Workshop"
                 fill
                 className="object-cover rounded-lg"
+                priority
               />
             </div>
           </div>

@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useLanguage } from '@/i18n/LanguageContext';
+import { ArrowRight } from 'lucide-react';
 
 const partners = [
   {
@@ -47,41 +48,6 @@ const partners = [
     description: 'BMW performance engineering',
     image: '/partners/dinan.png',
     link: 'https://www.dinancars.com/'
-  },
-  {
-    id: 7,
-    name: 'H&R',
-    description: 'Suspension and wheel spacers',
-    image: '/partners/hr.png',
-    link: 'https://www.hrsprings.com/'
-  },
-  {
-    id: 8,
-    name: 'Eibach',
-    description: 'Performance springs and sway bars',
-    image: '/partners/eibach.png',
-    link: 'https://www.eibach.com/'
-  },
-  {
-    id: 9,
-    name: 'MHD',
-    description: 'BMW ECU flashing and tuning software',
-    image: '/partners/mhd.png',
-    link: 'https://mhdtuning.com/'
-  },
-  {
-    id: 10,
-    name: 'Bootmod3',
-    description: 'Advanced BMW ECU tuning platform',
-    image: '/partners/bootmod3.png',
-    link: 'https://www.protuningfreaks.com/'
-  },
-  {
-    id: 11,
-    name: 'Burger Tuning',
-    description: 'JB4 tuning solutions and performance parts',
-    image: '/partners/burger.png',
-    link: 'https://burgertuning.com/'
   }
 ];
 
@@ -90,128 +56,94 @@ const services = [
     id: 1,
     title: 'Chip Tuning',
     description: 'Professional software solutions to enhance power and torque output of your BMW',
-    image: '/services/tuning.jpg',
+    image: '/images/TUNE.jpg',
     link: '/services/chip-tuning'
   },
   {
     id: 2,
     title: 'Maintenance',
     description: 'Professional maintenance services to keep your BMW in perfect condition',
-    image: '/services/maintenance.jpg',
+    image: '/images/service.jpeg',
     link: '/services/maintenance'
   },
   {
     id: 3,
     title: 'Retrofits',
     description: 'Installation of original BMW parts and accessories to enhance your vehicle',
-    image: '/services/retrofit.jpg',
+    image: '/images/Retrofits.jpg',
     link: '/services/retrofits'
   }
-];
-
-const featuredProducts = [
-  {
-    id: 1,
-    name: 'BMW M4 Carbon Fiber Front Splitter',
-    description: 'High-quality carbon fiber front splitter for improved aerodynamics',
-    price: '$1,299',
-    image: '/store/categories/body.jpg',
-  },
-  {
-    id: 2,
-    name: 'BMW M Performance Alcantara Wheel',
-    description: 'Premium Alcantara steering wheel with M Performance stitching',
-    price: '$899',
-    image: '/store/categories/steering.jpg',
-  },
-  {
-    id: 3,
-    name: 'BMW Harman Kardon Sound System',
-    description: 'Premium 16-speaker surround sound system',
-    price: '$3,499',
-    image: '/store/categories/multimedia.jpg',
-  },
 ];
 
 export default function Home() {
   const { t } = useLanguage();
 
+  const scrollToServices = () => {
+    const servicesSection = document.getElementById('services');
+    if (servicesSection) {
+      servicesSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="bg-m-dark">
       {/* Hero Section */}
-      <div className="relative group min-h-screen">
+      <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <Image
             src="/bmw-m-main.png"
-            alt="BMW M Performance"
+            alt="Hero Background"
             fill
-            sizes="100vw"
-            quality={90}
-            className="object-cover opacity-70 group-hover:opacity-50 transition-all duration-700 ease-in-out"
+            className="object-cover transform scale-110 animate-ken-burns"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-m-dark/95 via-m-dark/70 to-transparent group-hover:from-m-dark/98 group-hover:via-m-dark/85 transition-all duration-700 ease-in-out" />
+          <div className="absolute inset-0 bg-gradient-to-b from-m-dark/80 via-m-dark/50 to-black/90"></div>
         </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
-          <div className="max-w-3xl transform group-hover:translate-x-4 transition-transform duration-700">
-            <h1 className="text-4xl md:text-5xl font-extrabold text-white tracking-wider mb-6 group-hover:text-m-light-blue transition-colors duration-700">
-              {t('hero.title')}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="space-y-8 animate-fade-in-up">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight">
+              <span className="block text-m-red">Professional</span>
+              <span className="block bg-gradient-m bg-clip-text text-transparent">BMW Tuning & Service</span>
             </h1>
-            <div className="h-2 w-40 bg-gradient-m mb-8 group-hover:w-48 transition-all duration-700"></div>
-            <div className="text-lg md:text-xl text-gray-200 mb-12 space-y-4">
-              <p className="font-bold text-m-light-blue transform group-hover:translate-x-2 transition-transform duration-700">{t('hero.subtitle')}</p>
-              <ul className="space-y-3">
-                <li className="flex items-center transform group-hover:translate-x-2 transition-transform duration-700">
-                  <span className="text-m-red mr-3 text-lg">•</span>
-                  {t('hero.services.retrofits')}
-                </li>
-                <li className="flex items-center transform group-hover:translate-x-2 transition-transform duration-700">
-                  <span className="text-m-red mr-3 text-lg">•</span>
-                  {t('hero.services.tuning')}
-                </li>
-                <li className="flex items-center transform group-hover:translate-x-2 transition-transform duration-700">
-                  <span className="text-m-red mr-3 text-lg">•</span>
-                  {t('hero.services.coding')}
-                </li>
-                <li className="flex items-center transform group-hover:translate-x-2 transition-transform duration-700">
-                  <span className="text-m-red mr-3 text-lg">•</span>
-                  {t('hero.services.mechanical')}
-                </li>
-              </ul>
-            </div>
-            <div className="flex space-x-6">
-              <Link
-                href="/services"
-                className="bg-gradient-m text-white font-bold py-4 px-10 rounded-md hover:opacity-90 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-m-red/20"
+            <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              Expert tuning, retrofitting, and maintenance services for your BMW
+            </p>
+            <div className="flex justify-center gap-6 mt-12">
+              <button
+                onClick={scrollToServices}
+                className="inline-flex items-center justify-center px-8 py-4 border-2 border-m-blue text-base font-medium rounded-md text-white bg-m-blue hover:bg-m-light-blue transition-all duration-300 transform hover:scale-105"
               >
-                {t('hero.buttons.services')}
-              </Link>
-              <Link
-                href="/store"
-                className="bg-m-gray text-white font-bold py-4 px-10 rounded-md border-2 border-m-light-blue hover:bg-m-light-gray transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-m-light-blue/20"
+                Our Services
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button
+                disabled
+                className="inline-flex items-center justify-center px-8 py-4 border-2 border-m-red text-base font-medium rounded-md text-m-red cursor-not-allowed opacity-50"
               >
-                {t('hero.buttons.shop')}
-              </Link>
+                STORE
+                <span className="ml-2 text-xs">(Coming Soon)</span>
+              </button>
             </div>
           </div>
         </div>
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-m-dark to-transparent"></div>
       </div>
 
       {/* Services Section */}
-      <div className="bg-m-dark py-24">
+      <div id="services" className="bg-gradient-to-b from-m-dark to-m-blue/10 py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">{t('services.title')}</h2>
-            <div className="h-1 w-24 bg-gradient-m mx-auto mb-6"></div>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">{t('services.subtitle')}</p>
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">{t('services.title')}</h2>
+            <div className="h-1 w-20 md:w-24 bg-gradient-m mx-auto mb-6"></div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <div
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            {services.map((service) => (
+              <Link
                 key={service.id}
-                className="bg-m-gray rounded-lg overflow-hidden transform hover:scale-105 transition-all duration-500 hover:shadow-xl hover:shadow-m-red/20 group"
+                href={service.link}
+                className="bg-m-gray rounded-lg overflow-hidden transform hover:scale-105 transition-all duration-500 hover:shadow-xl hover:shadow-m-red/20 group cursor-pointer"
               >
-                <div className="relative h-48">
+                <div className="relative h-40 sm:h-48">
                   <Image
                     src={service.image}
                     alt={service.title}
@@ -220,90 +152,59 @@ export default function Home() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-m-dark/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 </div>
-                <div className="p-6">
-                  <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-m-light-blue transition-colors duration-300">{service.title}</h3>
-                  <p className="text-gray-300 mb-4">{service.description}</p>
-                  <Link
-                    href={service.link}
-                    className="inline-flex items-center text-m-light-blue font-semibold hover:text-white transition-colors duration-300"
-                  >
-                    {t('services.learnMore')}
-                    <svg className="w-5 h-5 ml-2 transform group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="p-4 md:p-6">
+                  <h3 className="text-xl md:text-2xl font-bold text-white mb-2 md:mb-3 group-hover:text-m-light-blue transition-colors duration-300">{service.title}</h3>
+                  <p className="text-sm md:text-base text-gray-300 mb-4">{service.description}</p>
+                  <div className="flex justify-end">
+                    <svg className="w-6 h-6 md:w-8 md:h-8 text-m-light-blue transform group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
-                  </Link>
+                  </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
       </div>
 
-      {/* Featured Products */}
-      <div className="py-24 bg-gradient-to-b from-m-dark to-black">
+      {/* Partners Section */}
+      <section className="bg-gradient-to-b from-m-blue/10 to-m-dark py-24" aria-labelledby="partners-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">{t('products.title')}</h2>
+            <h2 id="partners-heading" className="text-4xl md:text-5xl font-bold text-white mb-4">Our Partners</h2>
             <div className="h-1 w-24 bg-gradient-m mx-auto mb-6"></div>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">{t('products.subtitle')}</p>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">We collaborate with leading manufacturers of tuning and spare parts</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {featuredProducts.map((product) => (
-              <div
-                key={product.id}
-                className="bg-m-gray rounded-lg overflow-hidden transform hover:scale-105 transition-all duration-500 hover:shadow-xl hover:shadow-m-red/20 group"
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {partners.map((partner) => (
+              <a
+                key={partner.id}
+                href={partner.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group bg-m-gray rounded-lg p-8 transform hover:scale-105 transition-all duration-500 hover:shadow-xl hover:shadow-m-red/20"
+                aria-label={`Visit ${partner.name} website`}
               >
-                <div className="relative h-64">
-                  <Image
-                    src={product.image}
-                    alt={product.name}
-                    fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-700"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-m-dark/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="space-y-4">
+                  <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-m-light-blue transition-colors duration-300">
+                    {partner.name}
+                  </h3>
+                  <p className="text-gray-300 mb-4">{partner.description}</p>
                 </div>
-                <div className="p-6">
-                  <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-m-light-blue transition-colors duration-300">{product.name}</h3>
-                  <p className="text-gray-300 mb-4">{product.description}</p>
-                  <div className="flex justify-between items-center">
-                    <span className="text-m-red font-bold text-xl">{product.price}</span>
-                    <Link
-                      href={`/store/${product.id}`}
-                      className="inline-flex items-center text-m-light-blue font-semibold hover:text-white transition-colors duration-300"
-                    >
-                      {t('products.learnMore')}
-                      <svg className="w-5 h-5 ml-2 transform group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                      </svg>
-                    </Link>
-                  </div>
-                </div>
-              </div>
+              </a>
             ))}
           </div>
-          <div className="text-center mt-12">
-            <Link
-              href="/store"
-              className="inline-flex items-center bg-gradient-m text-white font-bold py-4 px-10 rounded-md hover:opacity-90 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-m-red/20"
-            >
-              {t('products.viewAll')}
-              <svg className="w-5 h-5 ml-2 transform group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </Link>
-          </div>
         </div>
-      </div>
+      </section>
 
       {/* Map Section */}
       <div className="py-24 bg-gradient-to-b from-black to-m-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">{t('location.title')}</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Our Location</h2>
             <div className="h-1 w-24 bg-gradient-m mx-auto mb-6"></div>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">{t('location.subtitle')}</p>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
             <div className="rounded-lg overflow-hidden shadow-xl transform hover:scale-105 transition-all duration-500 hover:shadow-2xl hover:shadow-m-red/20">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.9012415991547!2d-80.1494!3d25.9872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9ad3b4e5d7a5f%3A0x9c7c5c7c5c7c5c7c!2s2023%20Grant%20St%2C%20Hollywood%2C%20FL%2033302!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus"
@@ -318,20 +219,65 @@ export default function Home() {
               ></iframe>
             </div>
             <div className="bg-m-gray rounded-lg p-8 transform hover:scale-105 transition-all duration-500 hover:shadow-xl hover:shadow-m-red/20">
-              <div className="space-y-6">
+              <div className="space-y-8">
                 <div>
-                  <h3 className="text-2xl font-bold text-white mb-2">{t('location.address')}</h3>
-                  <p className="text-gray-300">{t('location.city')}</p>
+                  <h3 className="text-2xl font-bold text-white mb-4">Business Hours</h3>
+                  <div className="space-y-2">
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-300">Monday - Friday</span>
+                      <span className="text-white font-medium">9:00 AM - 6:00 PM</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-300">Saturday</span>
+                      <span className="text-white font-medium">10:00 AM - 4:00 PM</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-300">Sunday</span>
+                      <span className="text-white font-medium">Closed</span>
+                    </div>
+                  </div>
                 </div>
+
                 <div>
-                  <h3 className="text-2xl font-bold text-white mb-2">{t('location.hours')}</h3>
-                  <p className="text-gray-300">{t('location.hoursValue')}</p>
+                  <h3 className="text-2xl font-bold text-white mb-4">Contact Information</h3>
+                  <div className="space-y-4">
+                    <div>
+                      <p className="text-gray-300">Address</p>
+                      <p className="text-white">2023 Grant St, Hollywood, FL 33302</p>
+                    </div>
+                    <div>
+                      <p className="text-gray-300">Phone</p>
+                      <p className="text-white">+1 (954) 123-4567</p>
+                    </div>
+                    <div>
+                      <p className="text-gray-300">Email</p>
+                      <p className="text-white">info@bmpautomotive.com</p>
+                    </div>
+                  </div>
                 </div>
+
                 <div>
-                  <h3 className="text-2xl font-bold text-white mb-2">{t('location.contact')}</h3>
-                  <p className="text-gray-300">{t('location.phone')}</p>
-                  <p className="text-gray-300">{t('location.email')}</p>
+                  <h3 className="text-2xl font-bold text-white mb-4">Services Available</h3>
+                  <ul className="space-y-2">
+                    <li className="flex items-center text-gray-300">
+                      <span className="w-2 h-2 bg-m-red rounded-full mr-2"></span>
+                      Performance Tuning
+                    </li>
+                    <li className="flex items-center text-gray-300">
+                      <span className="w-2 h-2 bg-m-red rounded-full mr-2"></span>
+                      Maintenance & Repairs
+                    </li>
+                    <li className="flex items-center text-gray-300">
+                      <span className="w-2 h-2 bg-m-red rounded-full mr-2"></span>
+                      Parts Installation
+                    </li>
+                    <li className="flex items-center text-gray-300">
+                      <span className="w-2 h-2 bg-m-red rounded-full mr-2"></span>
+                      Diagnostic Services
+                    </li>
+                  </ul>
                 </div>
+
                 <div className="pt-4">
                   <a
                     href="https://maps.google.com/?q=2023+Grant+St,+Hollywood,+FL+33302"
@@ -339,7 +285,7 @@ export default function Home() {
                     rel="noopener noreferrer"
                     className="inline-flex items-center text-m-light-blue font-semibold hover:text-white transition-colors duration-300"
                   >
-                    {t('location.getDirections')}
+                    Get Directions
                     <svg className="w-5 h-5 ml-2 transform group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
@@ -357,7 +303,6 @@ export default function Home() {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">{t('instagram.title')}</h2>
             <div className="h-1 w-24 bg-gradient-m mx-auto mb-6"></div>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">{t('instagram.subtitle')}</p>
           </div>
           <div className="flex justify-center transform hover:scale-105 transition-transform duration-500">
             <div className="bg-m-gray rounded-lg overflow-hidden shadow-xl hover:shadow-2xl hover:shadow-m-red/20 transition-all duration-500 w-full">
@@ -387,41 +332,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-
-      {/* Partners Section */}
-      <section className="bg-m-dark py-24" aria-labelledby="partners-heading">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 id="partners-heading" className="text-4xl md:text-5xl font-bold text-white mb-4">Partners</h2>
-            <div className="h-1 w-24 bg-gradient-m mx-auto mb-6"></div>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">We collaborate with leading manufacturers of tuning and spare parts</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {partners.map((partner) => (
-              <a
-                key={partner.id}
-                href={partner.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group bg-m-gray rounded-lg p-8 transform hover:scale-105 transition-all duration-500 hover:shadow-xl hover:shadow-m-red/20"
-                aria-label={`Visit ${partner.name} website`}
-              >
-                <div className="space-y-4">
-                  <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-m-light-blue transition-colors duration-300">
-                    {partner.name}
-                  </h3>
-                  <p className="text-gray-300 mb-4">{partner.description}</p>
-                </div>
-              </a>
-            ))}
-          </div>
-          <div className="mt-12 text-center">
-            <p className="text-gray-300 text-sm">
-              {t('partners.seoText')}
-            </p>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }

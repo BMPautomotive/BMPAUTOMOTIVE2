@@ -52,25 +52,49 @@ export default function ChipTuningPage() {
                     <svg className="w-6 h-6 text-m-red mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span className="text-gray-300">Increased horsepower and torque</span>
+                    <span className="text-gray-300">Увеличение мощности двигателя до 30%</span>
                   </li>
                   <li className="flex items-start">
                     <svg className="w-6 h-6 text-m-red mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span className="text-gray-300">Improved throttle response</span>
+                    <span className="text-gray-300">Улучшение отзывчивости педали газа</span>
                   </li>
                   <li className="flex items-start">
                     <svg className="w-6 h-6 text-m-red mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span className="text-gray-300">Better fuel efficiency</span>
+                    <span className="text-gray-300">Оптимизация расхода топлива</span>
                   </li>
                   <li className="flex items-start">
                     <svg className="w-6 h-6 text-m-red mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span className="text-gray-300">Removed speed limiter</span>
+                    <span className="text-gray-300">Снятие ограничителя скорости</span>
+                  </li>
+                  <li className="flex items-start">
+                    <svg className="w-6 h-6 text-m-red mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="text-gray-300">Улучшение динамики разгона</span>
+                  </li>
+                  <li className="flex items-start">
+                    <svg className="w-6 h-6 text-m-red mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="text-gray-300">Оптимизация работы коробки передач</span>
+                  </li>
+                  <li className="flex items-start">
+                    <svg className="w-6 h-6 text-m-red mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="text-gray-300">Улучшение работы системы впрыска</span>
+                  </li>
+                  <li className="flex items-start">
+                    <svg className="w-6 h-6 text-m-red mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="text-gray-300">Гарантия на все работы</span>
                   </li>
                 </ul>
               </div>

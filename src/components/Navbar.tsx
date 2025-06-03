@@ -61,13 +61,13 @@ export default function Navbar() {
 
       <nav className="fixed top-0 left-0 w-full z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
+          <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo */}
             <div className="flex-shrink-0">
               <Link href="/" className="flex items-center">
-                <span className="text-2xl font-light text-white tracking-widest">BMP</span>
-                <div className="h-6 w-0.5 bg-white/30 mx-2"></div>
-                <span className="text-2xl font-light text-white tracking-widest">AUTOMOTIVE</span>
+                <span className="text-xl md:text-2xl font-light text-white tracking-widest">BMP</span>
+                <div className="h-4 md:h-6 w-0.5 bg-white/30 mx-2"></div>
+                <span className="text-xl md:text-2xl font-light text-white tracking-widest hidden sm:inline">AUTOMOTIVE</span>
               </Link>
             </div>
 
@@ -89,50 +89,57 @@ export default function Navbar() {
               </div>
             </div>
 
-            {/* Mobile menu button */}
-            <div className="md:hidden">
-              <button
-                onClick={() => setIsOpen(!isOpen)}
-                className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-white/80 focus:outline-none"
-              >
-                <span className="sr-only">Open main menu</span>
-                {!isOpen ? (
-                  <svg className="block h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 6h16M4 12h16M4 18h16" />
-                  </svg>
-                ) : (
-                  <svg className="block h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                )}
-              </button>
-            </div>
+            {/* Mobile menu button and Language Switcher container */}
+            <div className="flex items-center space-x-4">
+              {/* Language Switcher - visible on mobile */}
+              <div className="sm:hidden">
+                <LanguageSwitcher />
+              </div>
+              
+              {/* Mobile menu button */}
+              <div className="md:hidden">
+                <button
+                  onClick={() => setIsOpen(!isOpen)}
+                  className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-white/80 focus:outline-none"
+                  aria-expanded={isOpen}
+                >
+                  <span className="sr-only">Open main menu</span>
+                  {!isOpen ? (
+                    <svg className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                  ) : (
+                    <svg className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  )}
+                </button>
+              </div>
 
-            {/* Language Switcher */}
-            <div className="hidden sm:flex sm:items-center">
-              <LanguageSwitcher />
+              {/* Language Switcher - visible on desktop */}
+              <div className="hidden sm:flex sm:items-center">
+                <LanguageSwitcher />
+              </div>
             </div>
           </div>
         </div>
 
         {/* Mobile menu */}
         {isOpen && (
-          <div className="md:hidden bg-black/95 backdrop-blur-sm">
+          <div className="md:hidden bg-black/95 backdrop-blur-sm fixed inset-x-0 top-16 z-50">
             <div className="px-2 pt-2 pb-3 space-y-0.5 sm:px-3">
               {navigation.map((item, index) => (
                 <Link
                   key={`mobile-nav-${index}`}
                   href={item.href}
-                  className="text-white/80 hover:text-white block px-3 py-3 text-xs tracking-widest uppercase transition-all duration-300"
+                  className="text-white/80 hover:text-white block px-3 py-3 text-xs tracking-widest uppercase transition-all duration-300 border-b border-white/10 last:border-b-0"
+                  onClick={() => setIsOpen(false)}
                   onMouseEnter={() => handleMouseEnter(item.name)}
                   onMouseLeave={() => setHoveredItem(null)}
                 >
                   {item.name}
                 </Link>
               ))}
-              <div className="px-3 py-2">
-                <LanguageSwitcher />
-              </div>
             </div>
           </div>
         )}

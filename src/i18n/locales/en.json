@@ -3,7 +3,7 @@
     "home": "Home",
     "about": "About",
     "services": "Services",
-    "works": "Our Works",
+    "works": "Our Projects",
     "tuning": "Tuning",
     "maintenance": "Maintenance",
     "store": "Store",
@@ -83,7 +83,7 @@
     "phone": "(754) 925-9881"
   },
   "instagram": {
-    "title": "Our Works"
+    "title": "Our Projects"
   },
   "chat": {
     "title": "Chat Assistant",

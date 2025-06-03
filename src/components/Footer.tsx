@@ -96,7 +96,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/works" className="text-gray-400 hover:text-m-light-blue">
-                  Our Works
+                  Our Projects
                 </Link>
               </li>
               <li>
