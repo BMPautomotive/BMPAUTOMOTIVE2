@@ -293,11 +293,10 @@ export default function Home() {
             <div className="bg-m-gray rounded-lg overflow-hidden shadow-xl hover:shadow-2xl hover:shadow-m-red/20 transition-all duration-500 w-full">
               <div className="w-full max-w-4xl mx-auto">
                 <iframe
-                  src="https://cdn.lightwidget.com/widgets/197abdabbdaf5949b303759ab64d7a7a.html"
+                  src="https://www.instagram.com/bmp_automotive/embed"
                   scrolling="no"
-                  allowtransparency="true"
-                  className="lightwidget-widget w-full"
-                  style={{ width: '100%', border: 0, overflow: 'hidden', height: '450px', backgroundColor: 'transparent' }}
+                  className="w-full"
+                  style={{ width: '100%', border: 0, overflow: 'hidden', height: '450px' }}
                   title="Instagram Feed BMP Automotive"
                 />
               </div>
