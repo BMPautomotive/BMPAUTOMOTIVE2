@@ -297,6 +297,8 @@ export default function Home() {
                   scrolling="no"
                   allowTransparency={true}
                   className="lightwidget-widget w-full"
+                  style={{ width: '100%', border: 0, overflow: 'hidden', height: '450px' }}
+                  title="Instagram Feed BMP Automotive"
                 />
               </div>
             </div>
