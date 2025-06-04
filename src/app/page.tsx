@@ -110,10 +110,15 @@ export default function Home() {
             </p>
             <div className="flex justify-center gap-6 mt-12">
               <button
-                onClick={scrollToServices}
+                onClick={() => {
+                  scrollToServices();
+                  setTimeout(() => {
+                    window.location.href = '/services';
+                  }, 500);
+                }}
                 className="inline-flex items-center justify-center px-8 py-4 border-2 border-m-blue text-base font-medium rounded-md text-white bg-m-blue hover:bg-m-light-blue transition-all duration-300 transform hover:scale-105"
               >
-                Our Services
+                Services
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button
@@ -133,8 +138,10 @@ export default function Home() {
       <div id="services" className="bg-gradient-to-b from-m-dark to-m-blue/10 py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">{t('services.title')}</h2>
-            <div className="h-1 w-20 md:w-24 bg-gradient-m mx-auto mb-6"></div>
+            <Link href="/services" className="inline-block group">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 group-hover:text-m-light-blue transition-colors duration-300">{t('services.title')}</h2>
+              <div className="h-1 w-20 md:w-24 bg-gradient-m mx-auto mb-6 group-hover:w-32 transition-all duration-300"></div>
+            </Link>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {services.map((service) => (
