@@ -1,17 +1,16 @@
-import ru from './ru';
-import en from './en';
+import ru from './ru.json';
+import en from './en.json';
 import ruRetrofits from './ru/retrofits.json';
 import enRetrofits from './en/retrofits.json';
 
-const translations = {
-  ru: {
-    ...ru,
-    retrofits: ruRetrofits,
-  },
-  en: {
-    ...en,
-    retrofits: enRetrofits,
-  },
+export const locales = {
+  ru,
+  en,
 };
 
-export default translations; 
+export const retrofits = {
+  ru: ruRetrofits,
+  en: enRetrofits,
+};
+
+export default locales; 
