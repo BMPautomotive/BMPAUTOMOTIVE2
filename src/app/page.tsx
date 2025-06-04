@@ -283,24 +283,21 @@ export default function Home() {
       </div>
 
       {/* Instagram Feed */}
-      <div className="py-24 bg-gradient-to-b from-m-dark to-black">
-        <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full bg-m-dark py-24">
+        <div className="w-full px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">{t('instagram.title')}</h2>
             <div className="h-1 w-24 bg-gradient-m mx-auto mb-6"></div>
           </div>
-          <div className="flex justify-center transform hover:scale-105 transition-transform duration-500">
-            <div className="bg-m-gray rounded-lg overflow-hidden shadow-xl hover:shadow-2xl hover:shadow-m-red/20 transition-all duration-500 w-full">
-              <div className="w-full max-w-4xl mx-auto">
-                <iframe
-                  src="https://www.instagram.com/bmp_automotive/embed"
-                  scrolling="no"
-                  className="w-full"
-                  style={{ width: '100%', border: 0, overflow: 'hidden', height: '450px' }}
-                  title="Instagram Feed BMP Automotive"
-                />
-              </div>
-            </div>
+          <div className="w-full">
+            <iframe
+              src="https://cdn.lightwidget.com/widgets/197abdabbdaf5949b303759ab64d7a7a.html"
+              scrolling="no"
+              allowTransparency={true}
+              className="lightwidget-widget w-full"
+              style={{ width: '100%', border: 0, overflow: 'hidden', height: '800px', backgroundColor: 'transparent' }}
+              title="Instagram Feed BMP Automotive"
+            />
           </div>
           <div className="text-center mt-8">
             <a

@@ -65,9 +65,9 @@ export default function Navbar() {
             {/* Logo */}
             <div className="flex-shrink-0">
               <Link href="/" className="flex items-center">
-                <span className="text-xl md:text-2xl font-light text-white tracking-widest">BMP</span>
-                <div className="h-4 md:h-6 w-0.5 bg-white/30 mx-2"></div>
-                <span className="text-xl md:text-2xl font-light text-white tracking-widest hidden sm:inline">AUTOMOTIVE</span>
+                <span className="text-base md:text-2xl font-light text-white tracking-widest">BMP</span>
+                <div className="h-3 md:h-6 w-0.5 bg-white/30 mx-1 md:mx-2"></div>
+                <span className="text-base md:text-2xl font-light text-white tracking-widest">AUTOMOTIVE</span>
               </Link>
             </div>
 
