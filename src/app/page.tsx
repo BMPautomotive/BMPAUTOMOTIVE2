@@ -313,15 +313,15 @@ export default function Home() {
           </div>
           <div className="flex justify-center transform hover:scale-105 transition-transform duration-500">
             <div className="bg-m-gray rounded-lg overflow-hidden shadow-xl hover:shadow-2xl hover:shadow-m-red/20 transition-all duration-500 w-full">
-              {/* @ts-ignore */}
-              <iframe
-                src="https://lightwidget.com/widgets/197abdabbdaf5949b303759ab64d7a7a.html?width=100%&height=600&rows=2&cols=4&imageSize=300&imagePadding=10&background=transparent"
-                scrolling="no"
-                allowTransparency={true}
-                className="lightwidget-widget border-none overflow-hidden rounded-lg w-full"
-                style={{ width: '100%', border: 0, overflow: 'hidden', height: '600px' }}
-                title="Instagram Feed BMP Automotive"
-              ></iframe>
+              <div className="w-full max-w-4xl mx-auto">
+                <iframe 
+                  src="https://cdn.lightwidget.com/widgets/197abdabbdaf5949b303759ab64d7a7a.html" 
+                  scrolling="no" 
+                  allowtransparency="true" 
+                  className="lightwidget-widget" 
+                  style={{ width: '100%', border: 0, overflow: 'hidden' }}
+                />
+              </div>
             </div>
           </div>
           <div className="text-center mt-8">
