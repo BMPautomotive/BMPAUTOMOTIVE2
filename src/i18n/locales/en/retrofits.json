@@ -1,0 +1,72 @@
+{
+  "title": "Retrofits and Additional Equipment",
+  "oem": {
+    "title": "BMW Original Equipment",
+    "items": {
+      "headup": {
+        "title": "Head-Up Display",
+        "description": "Installation of original BMW head-up display for displaying important information directly on the windshield.",
+        "features": {
+          "1": "Speed and navigation display",
+          "2": "Vehicle system integration",
+          "3": "Adjustable brightness and position"
+        }
+      },
+      "ambient": {
+        "title": "Ambient Lighting",
+        "description": "Installation of multi-color ambient lighting to create a comfortable atmosphere in the cabin.",
+        "features": {
+          "1": "11 colors to choose from",
+          "2": "Lighting system integration",
+          "3": "Brightness and mode settings"
+        }
+      },
+      "camera": {
+        "title": "360° Camera System",
+        "description": "Installation of surround view camera system for maximum parking safety.",
+        "features": {
+          "1": "360-degree view",
+          "2": "Parking system integration",
+          "3": "High-resolution imaging"
+        }
+      }
+    }
+  },
+  "aftermarket": {
+    "title": "Aftermarket Equipment",
+    "items": {
+      "audio": {
+        "title": "Audio Systems",
+        "description": "Installation of premium audio systems for maximum sound quality.",
+        "features": {
+          "1": "Amplifiers and subwoofers",
+          "2": "Cabin soundproofing",
+          "3": "Professional tuning"
+        }
+      },
+      "suspension": {
+        "title": "Suspension",
+        "description": "Installation of sports suspension for improved handling.",
+        "features": {
+          "1": "Adjustable shock absorbers",
+          "2": "Sport springs",
+          "3": "Customized to your driving style"
+        }
+      },
+      "performance": {
+        "title": "Engine Tuning",
+        "description": "Installation of chip tuning and additional components for increased power.",
+        "features": {
+          "1": "Stage 1-3 chip tuning",
+          "2": "Turbo kit installation",
+          "3": "Diagnostics and tuning"
+        }
+      }
+    }
+  },
+  "contact": {
+    "title": "Interested in Installation?",
+    "description": "Contact us for detailed information about available options and installation costs. Our specialists will help you choose the optimal solution for your vehicle.",
+    "button": "Contact Us"
+  }
+} 
