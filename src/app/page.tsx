@@ -317,7 +317,7 @@ export default function Home() {
               <iframe
                 src="https://lightwidget.com/widgets/197abdabbdaf5949b303759ab64d7a7a.html?width=100%&height=600&rows=2&cols=4&imageSize=300&imagePadding=10&background=transparent"
                 scrolling="no"
-                allowtransparency="true"
+                allowTransparency={true}
                 className="lightwidget-widget border-none overflow-hidden rounded-lg w-full"
                 style={{ width: '100%', border: 0, overflow: 'hidden', height: '600px' }}
                 title="Instagram Feed BMP Automotive"
