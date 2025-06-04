@@ -295,7 +295,6 @@ export default function Home() {
                 <iframe 
                   src="https://cdn.lightwidget.com/widgets/197abdabbdaf5949b303759ab64d7a7a.html?imageSize=400&cols=2&rows=1" 
                   scrolling="no" 
-                  allowtransparency="true"
                   className="lightwidget-widget" 
                   style={{ width: '100%', border: 0, overflow: 'hidden', height: '420px' }}
                 />
