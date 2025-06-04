@@ -15,11 +15,9 @@ export default function WorksPage() {
           <iframe
             src="https://cdn.lightwidget.com/widgets/197abdabbdaf5949b303759ab64d7a7a.html"
             scrolling="no"
-            allowtransparency="true"
             className="lightwidget-widget w-full"
-            style={{ width: '100%', border: 0, overflow: 'hidden' }}
+            style={{ width: '100%', border: 0, overflow: 'hidden', height: '800px', backgroundColor: 'transparent' }}
             title="Instagram Feed BMP Automotive"
-            height={800}
           ></iframe>
         </div>
       </div>

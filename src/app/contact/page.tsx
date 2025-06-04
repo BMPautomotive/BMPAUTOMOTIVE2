@@ -159,7 +159,6 @@ export default function ContactPage() {
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    allowTransparency={true}
                     title="BMP Automotive Location"
                   ></iframe>
                 </div>
