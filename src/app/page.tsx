@@ -55,9 +55,9 @@ const services = [
   {
     id: 1,
     title: 'Chip Tuning',
-    description: 'Professional software solutions to enhance power and torque output of your BMW',
+    description: 'Professional BMW tuning that\'ll make your ride go from basic to beast mode',
     image: '/images/TUNE.jpg',
-    link: '/services/chip-tuning'
+    link: '/tuning'
   },
   {
     id: 2,
@@ -292,12 +292,12 @@ export default function Home() {
           <div className="flex justify-center transform hover:scale-105 transition-transform duration-500">
             <div className="bg-m-gray rounded-lg overflow-hidden shadow-xl hover:shadow-2xl hover:shadow-m-red/20 transition-all duration-500 w-full">
               <div className="w-full max-w-4xl mx-auto">
-                <iframe 
-                  src="https://cdn.lightwidget.com/widgets/197abdabbdaf5949b303759ab64d7a7a.html?imageSize=400&cols=2&rows=1" 
-                  scrolling="no" 
+                <iframe
+                  src="https://www.instagram.com/p/C4YwqQJtQYw/embed"
+                  scrolling="no"
+                  className="w-full h-[450px]"
+                  style={{ border: 'none', overflow: 'hidden' }}
                   allowTransparency={true}
-                  className="lightwidget-widget" 
-                  style={{ width: '100%', border: 0, overflow: 'hidden', height: '420px' }}
                 />
               </div>
             </div>

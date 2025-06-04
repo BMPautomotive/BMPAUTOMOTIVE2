@@ -24,7 +24,7 @@ export default function ChipTuningPage() {
               CHIP TUNING
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional software solutions to enhance power and torque output of your BMW
+              Professional BMW tuning that'll make your ride go from basic to beast mode
             </p>
           </div>
         </div>
@@ -38,10 +38,10 @@ export default function ChipTuningPage() {
               <div className="bg-white/5 p-8 rounded-lg">
                 <h2 className="text-2xl font-bold text-white mb-6">ABOUT CHIP TUNING</h2>
                 <p className="text-gray-300 mb-4">
-                  Chip tuning is a process of modifying the electronic control unit (ECU) of your BMW to optimize its performance. Our professional software solutions can significantly increase power and torque while maintaining reliability.
+                  We're rocking with Reborn Technologies - the real deal in the tuning game. These guys are straight-up wizards, with a crew of programmers from Russia (Moscow), Germany, and Belgium. They've been dropping fire tunes for years, making cars go from zero to hero.
                 </p>
                 <p className="text-gray-300">
-                  We use state-of-the-art equipment and software to ensure the best results for your vehicle. Our team of experts has years of experience in BMW chip tuning and can provide customized solutions for your specific model.
+                  Here's the real talk: European dealers can spot if you've been messing with the software, and they might void your warranty. Even if you flash back to stock, they can still see you've been in there. But hey, if nothing's broken, most dealers turn a blind eye to a little tuning action.
                 </p>
               </div>
 
