@@ -263,28 +263,6 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div>
-                  <h3 className="text-2xl font-bold text-white mb-4">Services Available</h3>
-                  <ul className="space-y-2">
-                    <li className="flex items-center text-gray-300">
-                      <span className="w-2 h-2 bg-m-red rounded-full mr-2"></span>
-                      Performance Tuning
-                    </li>
-                    <li className="flex items-center text-gray-300">
-                      <span className="w-2 h-2 bg-m-red rounded-full mr-2"></span>
-                      Maintenance & Repairs
-                    </li>
-                    <li className="flex items-center text-gray-300">
-                      <span className="w-2 h-2 bg-m-red rounded-full mr-2"></span>
-                      Parts Installation
-                    </li>
-                    <li className="flex items-center text-gray-300">
-                      <span className="w-2 h-2 bg-m-red rounded-full mr-2"></span>
-                      Diagnostic Services
-                    </li>
-                  </ul>
-                </div>
-
                 <div className="pt-4">
                   <a
                     href="https://maps.google.com/?q=2023+Grant+St,+Hollywood,+FL+33302"
@@ -315,11 +293,11 @@ export default function Home() {
             <div className="bg-m-gray rounded-lg overflow-hidden shadow-xl hover:shadow-2xl hover:shadow-m-red/20 transition-all duration-500 w-full">
               <div className="w-full max-w-4xl mx-auto">
                 <iframe 
-                  src="https://cdn.lightwidget.com/widgets/197abdabbdaf5949b303759ab64d7a7a.html" 
+                  src="https://cdn.lightwidget.com/widgets/197abdabbdaf5949b303759ab64d7a7a.html?imageSize=400&cols=2&rows=1" 
                   scrolling="no" 
-                  allowTransparency={true}
+                  allowtransparency="true"
                   className="lightwidget-widget" 
-                  style={{ width: '100%', border: 0, overflow: 'hidden' }}
+                  style={{ width: '100%', border: 0, overflow: 'hidden', height: '420px' }}
                 />
               </div>
             </div>
