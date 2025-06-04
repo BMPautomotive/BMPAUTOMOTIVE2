@@ -293,11 +293,10 @@ export default function Home() {
             <div className="bg-m-gray rounded-lg overflow-hidden shadow-xl hover:shadow-2xl hover:shadow-m-red/20 transition-all duration-500 w-full">
               <div className="w-full max-w-4xl mx-auto">
                 <iframe
-                  src="https://www.instagram.com/p/C4YwqQJtQYw/embed"
+                  src="https://cdn.lightwidget.com/widgets/197abdabbdaf5949b303759ab64d7a7a.html"
                   scrolling="no"
-                  className="w-full h-[450px]"
-                  style={{ border: 'none', overflow: 'hidden' }}
                   allowTransparency={true}
+                  className="lightwidget-widget w-full"
                 />
               </div>
             </div>
