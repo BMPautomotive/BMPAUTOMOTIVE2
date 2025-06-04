@@ -250,11 +250,11 @@ export default function Home() {
                   <div className="space-y-4">
                     <div>
                       <p className="text-gray-300">Address</p>
-                      <p className="text-white">2023 Grant St, Hollywood, FL 33302</p>
+                      <p className="text-white">2023 Grant St, Hollywood, FL 33020</p>
                     </div>
                     <div>
                       <p className="text-gray-300">Phone</p>
-                      <p className="text-white">+1 (954) 123-4567</p>
+                      <p className="text-white">+1 (754) 295-9881</p>
                     </div>
                     <div>
                       <p className="text-gray-300">Email</p>

@@ -113,7 +113,7 @@ export default function Footer() {
             <ul className="space-y-2 text-gray-400">
               <li>2023 Grant St</li>
               <li>Hollywood, FL 33020</li>
-              <li>Phone: (754) 925-9881</li>
+              <li>Phone: +1 (754) 295-9881</li>
               <li>Email: bimmermotorsportperformance@gmail.com</li>
             </ul>
           </div>
