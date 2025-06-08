@@ -138,17 +138,14 @@ export default function Home() {
       <div id="services" className="bg-gradient-to-b from-m-dark to-m-blue/10 py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 md:mb-16">
-            <Link href="/services" className="inline-block group">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 group-hover:text-m-light-blue transition-colors duration-300">{t('services.title')}</h2>
-              <div className="h-1 w-20 md:w-24 bg-gradient-m mx-auto mb-6 group-hover:w-32 transition-all duration-300"></div>
-            </Link>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">{t('services.title')}</h2>
+            <div className="h-1 w-20 md:w-24 bg-gradient-m mx-auto mb-6"></div>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {services.map((service) => (
-              <Link
+              <div
                 key={service.id}
-                href={service.link}
-                className="bg-m-gray rounded-lg overflow-hidden transform hover:scale-105 transition-all duration-500 hover:shadow-xl hover:shadow-m-red/20 group cursor-pointer"
+                className="bg-m-gray rounded-lg overflow-hidden transform hover:scale-105 transition-all duration-500 hover:shadow-xl hover:shadow-m-red/20 group cursor-not-allowed opacity-75"
               >
                 <div className="relative h-40 sm:h-48">
                   <Image
@@ -168,7 +165,7 @@ export default function Home() {
                     </svg>
                   </div>
                 </div>
-              </Link>
+              </div>
             ))}
           </div>
         </div>
