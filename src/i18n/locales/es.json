@@ -89,5 +89,11 @@
     "title": "Asistente de Chat",
     "placeholder": "Escribe tu mensaje...",
     "send": "Enviar"
+  },
+  "partners": {
+    "title": "Socios",
+    "subtitle": "Colaboramos con los principales fabricantes de tuning y repuestos",
+    "visitWebsite": "Visitar Sitio Web",
+    "seoText": "Socio oficial de los principales fabricantes de tuning y repuestos para BMW"
   }
 } 

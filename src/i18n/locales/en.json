@@ -89,5 +89,11 @@
     "title": "Chat Assistant",
     "placeholder": "Type your message...",
     "send": "Send"
+  },
+  "partners": {
+    "title": "Partners",
+    "subtitle": "We collaborate with leading tuning and parts manufacturers",
+    "visitWebsite": "Visit Website",
+    "seoText": "Official partner of leading BMW tuning and parts manufacturers"
   }
 } 
