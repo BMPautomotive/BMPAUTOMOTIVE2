@@ -102,11 +102,11 @@ export default function Home() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="space-y-8 animate-fade-in-up">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight">
-              <span className="block text-m-red">Professional</span>
-              <span className="block bg-gradient-m bg-clip-text text-transparent">BMW Tuning & Service</span>
+              <span className="block text-m-red">{t('hero.title')}</span>
+              <span className="block bg-gradient-m bg-clip-text text-transparent">{t('hero.subtitle')}</span>
             </h1>
             <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Expert tuning, retrofitting, and maintenance services for your BMW
+              {t('hero.description')}
             </p>
             <div className="flex justify-center gap-6 mt-12">
               <button
@@ -118,15 +118,15 @@ export default function Home() {
                 }}
                 className="inline-flex items-center justify-center px-8 py-4 border-2 border-m-blue text-base font-medium rounded-md text-white bg-m-blue hover:bg-m-light-blue transition-all duration-300 transform hover:scale-105"
               >
-                Services
+                {t('hero.buttons.services')}
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button
                 disabled
                 className="inline-flex items-center justify-center px-8 py-4 border-2 border-m-red text-base font-medium rounded-md text-m-red cursor-not-allowed opacity-50"
               >
-                STORE
-                <span className="ml-2 text-xs">(Coming Soon)</span>
+                {t('hero.buttons.shop')}
+                <span className="ml-2 text-xs">({t('hero.buttons.comingSoon')})</span>
               </button>
             </div>
           </div>
@@ -178,9 +178,9 @@ export default function Home() {
       <section className="bg-gradient-to-b from-m-blue/10 to-m-dark py-24" aria-labelledby="partners-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 id="partners-heading" className="text-4xl md:text-5xl font-bold text-white mb-4">Our Partners</h2>
+            <h2 id="partners-heading" className="text-4xl md:text-5xl font-bold text-white mb-4">{t('partners.title')}</h2>
             <div className="h-1 w-24 bg-gradient-m mx-auto mb-6"></div>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">We collaborate with leading manufacturers of tuning and spare parts</p>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">{t('partners.subtitle')}</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {partners.map((partner) => (
@@ -190,13 +190,13 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group bg-m-gray rounded-lg p-8 transform hover:scale-105 transition-all duration-500 hover:shadow-xl hover:shadow-m-red/20"
-                aria-label={`Visit ${partner.name} website`}
+                aria-label={`${t('partners.visitWebsite')} ${partner.name}`}
               >
                 <div className="space-y-4">
                   <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-m-light-blue transition-colors duration-300">
                     {partner.name}
                   </h3>
-                  <p className="text-gray-300 mb-4">{partner.description}</p>
+                  <p className="text-gray-300 mb-4">{t(`partners.descriptions.${partner.name.toLowerCase().replace(/\s+/g, '')}` as any)}</p>
                 </div>
               </a>
             ))}
@@ -208,7 +208,7 @@ export default function Home() {
       <div className="py-24 bg-gradient-to-b from-black to-m-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Our Location</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">{t('location.title')}</h2>
             <div className="h-1 w-24 bg-gradient-m mx-auto mb-6"></div>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
@@ -221,60 +221,38 @@ export default function Home() {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="BMP Automotive Location"
+                title={t('location.title')}
                 className="rounded-lg"
               ></iframe>
             </div>
             <div className="bg-m-gray rounded-lg p-8 transform hover:scale-105 transition-all duration-500 hover:shadow-xl hover:shadow-m-red/20">
               <div className="space-y-8">
                 <div>
-                  <h3 className="text-2xl font-bold text-white mb-4">Business Hours</h3>
+                  <h3 className="text-2xl font-bold text-white mb-4">{t('location.businessHours.title')}</h3>
                   <div className="space-y-2">
                     <div className="flex justify-between items-center">
-                      <span className="text-gray-300">Monday - Friday</span>
+                      <span className="text-gray-300">{t('location.businessHours.weekdays')}</span>
                       <span className="text-white font-medium">9:00 AM - 6:00 PM</span>
                     </div>
                     <div className="flex justify-between items-center">
-                      <span className="text-gray-300">Saturday</span>
+                      <span className="text-gray-300">{t('location.businessHours.saturday')}</span>
                       <span className="text-white font-medium">10:00 AM - 4:00 PM</span>
                     </div>
                     <div className="flex justify-between items-center">
-                      <span className="text-gray-300">Sunday</span>
-                      <span className="text-white font-medium">Closed</span>
+                      <span className="text-gray-300">{t('location.businessHours.sunday')}</span>
+                      <span className="text-white font-medium">{t('location.businessHours.closed')}</span>
                     </div>
                   </div>
                 </div>
 
                 <div>
-                  <h3 className="text-2xl font-bold text-white mb-4">Contact Information</h3>
+                  <h3 className="text-2xl font-bold text-white mb-4">{t('location.contactInfo.title')}</h3>
                   <div className="space-y-4">
-                    <div>
-                      <p className="text-gray-300">Address</p>
-                      <p className="text-white">2023 Grant St, Hollywood, FL 33020</p>
-                    </div>
-                    <div>
-                      <p className="text-gray-300">Phone</p>
-                      <p className="text-white">+1 (754) 295-9881</p>
-                    </div>
-                    <div>
-                      <p className="text-gray-300">Email</p>
-                      <p className="text-white">info@bmpautomotive.com</p>
-                    </div>
+                    <p className="text-gray-300">{t('location.address')}</p>
+                    <p className="text-gray-300">{t('location.city')}</p>
+                    <p className="text-gray-300">{t('location.email')}</p>
+                    <p className="text-gray-300">{t('location.phone')}</p>
                   </div>
-                </div>
-
-                <div className="pt-4">
-                  <a
-                    href="https://maps.google.com/?q=2023+Grant+St,+Hollywood,+FL+33302"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center text-m-light-blue font-semibold hover:text-white transition-colors duration-300"
-                  >
-                    Get Directions
-                    <svg className="w-5 h-5 ml-2 transform group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
-                  </a>
                 </div>
               </div>
             </div>

@@ -12,6 +12,7 @@
   "hero": {
     "title": "TALLER DE TUNING BMW",
     "subtitle": "Especialista Profesional en BMW M Performance",
+    "description": "Servicios expertos de tuning, instalación de equipamiento y mantenimiento para tu BMW",
     "services": {
       "retrofits": "Retrofits",
       "tuning": "Tuning DME Etapa 1-3",
@@ -20,7 +21,8 @@
     },
     "buttons": {
       "services": "Hacer Cita",
-      "shop": "Tienda"
+      "shop": "Tienda",
+      "comingSoon": "Próximamente"
     }
   },
   "services": {
@@ -80,7 +82,17 @@
     "address": "2023 Grant St",
     "city": "Hollywood, FL 33020",
     "email": "bimmermotorsportperformance@gmail.com",
-    "phone": "+1 (754) 295-9881"
+    "phone": "+1 (754) 295-9881",
+    "businessHours": {
+      "title": "Horario de Atención",
+      "weekdays": "Lunes - Viernes",
+      "saturday": "Sábado",
+      "sunday": "Domingo",
+      "closed": "Cerrado"
+    },
+    "contactInfo": {
+      "title": "Información de Contacto"
+    }
   },
   "instagram": {
     "title": "Nuestros Trabajos"
@@ -94,6 +106,14 @@
     "title": "Socios",
     "subtitle": "Colaboramos con los principales fabricantes de tuning y repuestos",
     "visitWebsite": "Visitar Sitio Web",
-    "seoText": "Socio oficial de los principales fabricantes de tuning y repuestos para BMW"
+    "seoText": "Socio oficial de los principales fabricantes de tuning y repuestos para BMW",
+    "descriptions": {
+      "acSchnitzer": "Tuning premium BMW y piezas de alto rendimiento",
+      "brembo": "Sistemas de frenos de alto rendimiento",
+      "kwSuspensions": "Soluciones premium de suspensión",
+      "akrapovic": "Sistemas de escape de titanio",
+      "bbs": "Llantas de aleación premium",
+      "dinan": "Ingeniería de rendimiento BMW"
+    }
   }
 } 
